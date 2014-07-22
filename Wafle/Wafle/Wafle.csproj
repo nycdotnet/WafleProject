@@ -107,6 +107,9 @@
     <TypeScriptSourceMap>false</TypeScriptSourceMap>
     <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug_BuildUIOnly'">
+    <TypeScriptModuleKind>amd</TypeScriptModuleKind>
+  </PropertyGroup>
   <Import Project="$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets" />
   <PropertyGroup>
     <PostBuildEvent>node "$(ProjectDir)build\build.js"</PostBuildEvent>
